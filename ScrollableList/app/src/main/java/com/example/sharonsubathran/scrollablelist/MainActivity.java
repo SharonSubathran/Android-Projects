@@ -38,7 +38,7 @@ public class MainActivity extends ListActivity {
        // getListView().setAdapter(adapter);
         lvCountries.setAdapter(adapter);
 
-        lvCountries.setOnItemClickListener(new AdapterView.OnItemClickListener()) {
+        lvCountries.setOnItemClickListener(new AdapterView.OnItemClickListener()) { 
 
             public void onItemClick(AdapterView<?>) parent, View view, int position, long id); {
                 Toast.makeText(getApplicationContext(), "Position:" + position + " - Item:" + countries[position], Toast.LENGTH_LONG).show();
