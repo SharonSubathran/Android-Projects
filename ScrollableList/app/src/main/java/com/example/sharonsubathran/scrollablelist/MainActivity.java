@@ -9,7 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class MainActivity extends ListActivity {
+public class   MainActivity extends AppCompatActivity {
 
     String[] countries = new String[] {
             "Australia",
@@ -33,13 +33,17 @@ public class MainActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ListView lvCountries = (ListView) findViewById(R.id.lvCountries);
+        ListView List = null ;
+
+        ArrayAdapter<String> ListDataAdapter;
+
         ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_list_item_1, countries);
-       // getListView().setAdapter(adapter);
-        lvCountries.setAdapter(adapter);
 
-        lvCountries.setOnItemClickListener(new AdapterView.OnItemClickListener()) { 
+        List.setAdapter(adapter);
 
+        List.setOnItemClickListener(AdapterView, view, i id) {
+            Intent intent = new Intent packageContext MainActivity.this, SecondActivity.class);
+            intent.putExtra(name: "items", List.getItemAtPosition()
             public void onItemClick(AdapterView<?>) parent, View view, int position, long id); {
                 Toast.makeText(getApplicationContext(), "Position:" + position + " - Item:" + countries[position], Toast.LENGTH_LONG).show();
             }
